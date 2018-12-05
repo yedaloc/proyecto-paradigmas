@@ -23,8 +23,9 @@ class Controller:
 	#		respuesta = self.model.BuscarEmpresa(empresa)
 	#		return respuesta
 	def realizarPruebas(self):
-		empresa= self.view.vistarealizarPruebas()
-		respuesta= model.Model.realizarPruebas(empresa)
+		empresa= View.vistarealizarPruebas(self)
+		respuesta= Model.realizarPruebas(self, empresa)
+		return respuesta
 
 	def listarPersonas(self):
 		listaDePersonas = self.model.listarPersonas()

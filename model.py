@@ -94,25 +94,18 @@ class Model:
 	def realizarPruebas(self, nombreEmp):
 		noEncontrado = "Empresa no esta registrada"
 		try:
-			print ("entro al try")
 			archivo = open('entidad.pickle','rb')
-
 			listaempresas = pickle.load(archivo)
-			print ("entro la lista")
 			archivo.close()
+
 			for Entidad in listaempresas:
-				print ("entro en el for")
 				if(Entidad.nombreEmp == nombreEmp):
 					resultado =  [ Entidad.productovendido, Entidad.caja, Entidad.productocontrol, Entidad.montocontrol]
-					return resultado
-			return noEncontrado
+				else:
+					resultado = noEncontrado
 		except IOError:
-			return noEncontrado 
-		return
-
-	#para la prueba 1 comparamos los datos brindados con los datos de la empresa
-    
-		if resultado[1]==resultado[3] and resultado[2]==resultado[4]:
+			return noEncontrado
+		if resultado[0]==resultado[2] and resultado[1]==resultado[3]:
 			
 			print ("no hay irregularidad ")
 			reporte="En esta empresa no se encontro irregularidades"
@@ -122,7 +115,3 @@ class Model:
 			reporte="las cantidades vendidas no coinciden"
 			
 				#generarReporte(self,reporte)
-
-
-			ult_eval=time.strftime("%d/%m/%y")	
-		
