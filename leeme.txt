@@ -1,0 +1,23 @@
+Universo: es la tienda madre que posee varios locales comerciales
+	nombre del local, referencia(va a que tipo de universo en especifico ya sea tipo de ventas comerciale o distribuidoras)
+	tipo: que tipo de tienda posee
+
+
+
+Entidad: serian las empresas en la cual se les realizara un control de pruebas
+	Dueño:
+	Notas: rubro de la tienda ( a que se dedica)
+	Importancia dactor: ver que tan importante es la empresa para el universo se clasifica en tres modulos alta, medi, baja
+	administrativo: donde se guardan los datos de procesos administrativos de la empresa(ventas, invenario)
+
+Empresa: tipos de empresa que pueden haber dentro de luniverso
+	clasificacion: dentro de la clasificacion de la empresa vemos si es de ventas, administrativa o de auditoria
+}
+
+Empresa Auditora: se encarga de hacer las auditorias 
+	realizarAuditoria(auditoria)
+	
+
+Requisitos del sistema
+*tener instalado python3
+
